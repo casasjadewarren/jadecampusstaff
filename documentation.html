@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Documentation | ISUFST San Enrique Campus
+    </title>
+
+
+    <style>
+
+        :root {
+            --green: #075b32;
+            --dark-green: #043d23;
+            --gold: #c9a227;
+            --light: #f5f6f4;
+            --white: #ffffff;
+            --text: #222222;
+            --muted: #666666;
+            --border: #d9ddd9;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            background: var(--light);
+
+            color: var(--text);
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            background: var(--green);
+
+            color: white;
+
+            border-bottom: 5px solid var(--gold);
+        }
+
+
+        .top-line {
+
+            height: 6px;
+
+            background: var(--gold);
+        }
+
+
+        .header-content {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 28px 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+        }
+
+
+        .logo {
+
+            width: 90px;
+
+            height: 90px;
+
+            object-fit: contain;
+
+            background: white;
+
+            border-radius: 50%;
+
+            padding: 5px;
+
+            flex-shrink: 0;
+        }
+
+
+        .header-text h1 {
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .header-text p {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 45px 25px 55px;
+        }
+
+
+        .page-title {
+
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .page-title h2 {
+
+            color: var(--dark-green);
+
+            font-size: 32px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+
+        .gold-line {
+
+            width: 70px;
+
+            height: 3px;
+
+            background: var(--gold);
+
+            margin: 12px auto 15px;
+        }
+
+
+        .page-title p {
+
+            color: var(--muted);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .controls {
+
+            display: flex;
+
+            justify-content: center;
+
+            margin: 30px 0 45px;
+        }
+
+
+        .back-btn {
+
+            background: var(--green);
+
+            color: white;
+
+            border: 1px solid var(--green);
+
+            padding: 11px 23px;
+
+            cursor: pointer;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.2s ease;
+        }
+
+
+        .back-btn:hover {
+
+            background: var(--dark-green);
+        }
+
+
+        /* =========================
+           DOCUMENTATION GRID
+        ========================= */
+
+        .documentation-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           PHOTO CARD
+        ========================= */
+
+        .photo-card {
+
+            background: var(--white);
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.06);
+
+            overflow: hidden;
+
+            transition: 0.2s ease;
+        }
+
+
+        .photo-card:hover {
+
+            box-shadow:
+                0 6px 16px rgba(0,0,0,0.10);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .photo-card img {
+
+            width: 100%;
+
+            height: 285px;
+
+            object-fit: cover;
+
+            display: block;
+
+            background: #eeeeee;
+
+            border-bottom:
+                4px solid var(--gold);
+        }
+
+
+        .photo-content {
+
+            padding: 18px;
+
+            text-align: left;
+        }
+
+
+        .photo-title {
+
+            color: var(--dark-green);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            word-break: break-word;
+
+            margin-bottom: 7px;
+        }
+
+
+        .photo-description {
+
+            color: var(--muted);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: var(--dark-green);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            border-top: 4px solid var(--gold);
+        }
+
+
+        footer p {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 13px;
+
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .documentation-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .header-content {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px 18px;
+            }
+
+
+            .logo {
+
+                width: 80px;
+
+                height: 80px;
+            }
+
+
+            .header-text h1 {
+
+                font-size: 22px;
+            }
+
+
+            .header-text p {
+
+                font-size: 11px;
+            }
+
+
+            .container {
+
+                padding: 35px 16px 45px;
+            }
+
+
+            .page-title h2 {
+
+                font-size: 26px;
+            }
+
+
+            .documentation-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .photo-card img {
+
+                height: 310px;
+            }
+
+
+            .back-btn {
+
+                width: 100%;
+
+                max-width: 280px;
+            }
+
+        }
+
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            .controls {
+
+                display: none;
+            }
+
+
+            header {
+
+                box-shadow: none;
+            }
+
+
+            footer {
+
+                margin-top: 20px;
+            }
+
+
+            .photo-card {
+
+                break-inside: avoid;
+
+                box-shadow: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-line"></div>
+
+        <div class="header-content">
+
+            <img
+                src="isufst.jpg"
+                alt="ISUFST Logo"
+                class="logo"
+            >
+
+            <div class="header-text">
+
+                <h1>
+                    ISUFST San Enrique Campus
+                </h1>
+
+                <p>
+                    Iloilo State University of Fisheries Science and Technology
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+
+        <div class="page-title">
+
+            <h2>
+                Campus Documentation
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p>
+                Activities, events, and official documentation
+                of ISUFST San Enrique Campus
+            </p>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="controls">
+
+            <button
+                class="back-btn"
+                onclick="window.location.href='index.html'">
+
+                ← Back to Campus Leaders
+
+            </button>
+
+        </div>
+
+
+        <!-- DOCUMENTATION PHOTOS -->
+
+        <div class="documentation-grid">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="IMG_20260918_153043.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        IMG_20260918_153043.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="IMG_20260918_143718.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        IMG_20260918_143718.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="IMG_20260917_080905.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        IMG_20260917_080905.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="IMG_20260917_094141.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        IMG_20260917_094141.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="MVIMG_20260917_075917.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        MVIMG_20260917_075917.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 6 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="MVIMG_20260917_075744.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        MVIMG_20260917_075744.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 7 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="IMG_20260917_081027.jpg"
+                    alt="ISUFST Campus Documentation"
+                >
+
+                <div class="photo-content">
+
+                    <div class="photo-title">
+                        IMG_20260917_081027.jpg
+                    </div>
+
+                    <div class="photo-description">
+                        Official documentation from
+                        ISUFST San Enrique Campus.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 ISUFST, San Enrique Campus |
+            Iloilo, Philippines
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
